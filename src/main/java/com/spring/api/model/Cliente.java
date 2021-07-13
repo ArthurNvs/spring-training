@@ -50,5 +50,9 @@ public class Cliente {
 		Cliente other = (Cliente) obj;
 		return Objects.equals(id, other.id) && Objects.equals(nome, other.nome);
 	}
-
+	
+	@Override
+	public String toString() {
+		return String.format("Cliente [id=%d, nome=%d]", id, nome);
+	}
 }

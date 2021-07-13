@@ -15,7 +15,5 @@ public class SpringApiApplication {
 		PremiarClienteService service = appContext.getBean(PremiarClienteService.class);
 		
 		service.premiar();
-		System.out.println("premiado");
 	}
-
 }

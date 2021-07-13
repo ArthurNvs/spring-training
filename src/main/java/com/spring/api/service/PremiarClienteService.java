@@ -1,6 +1,5 @@
 package com.spring.api.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.spring.api.premiacao.GatewayPremiacao;
@@ -11,9 +10,9 @@ public class PremiarClienteService {
 	
 	private GatewayPremiacao gatewayPremiacao;
 	
-//	public PremiarClienteService(GatewayPremiacao gatewayPremiacao) {
-//		this.gatewayPremiacao = gatewayPremiacao;
-//	}
+	public PremiarClienteService(GatewayPremiacao gatewayPremiacao) {
+		this.gatewayPremiacao = gatewayPremiacao;
+	}
 	
 	public void premiar() {
 		gatewayPremiacao.efetuarPremiacao(TipoPremio.DINHEIRO);
@@ -21,8 +20,8 @@ public class PremiarClienteService {
 	
 	//serve para injetar dependência pelo Spring
 	//porém aqui complica um pouco a parte de testes
-	@Autowired
-	public void setGatewayPremiacao(GatewayPremiacao gateway) {
-		this.gatewayPremiacao = gateway;
-	}
+//	@Autowired
+//	public void setGatewayPremiacao(GatewayPremiacao gateway) {
+//		this.gatewayPremiacao = gateway;
+//	}
 }
